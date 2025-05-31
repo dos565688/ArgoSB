@@ -42,7 +42,8 @@ fi
 case $(uname -m) in
 aarch64) cpu=arm64;;
 x86_64) cpu=amd64;;
-*) echo "目前脚本不支持$(uname -m)架构" && exit;;
+s390x) cpu=s390;;
+#*) echo "目前脚本不支持$(uname -m)架构" && exit;;
 esac
 hostname=$(hostname)
 del(){
@@ -57,7 +58,7 @@ rm -rf /etc/s-box-ag /usr/bin/agsb
 }
 up(){
 rm -rf /usr/bin/agsb
-curl -L -o /usr/bin/agsb -# --retry 2 --insecure https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh
+curl -L -o /usr/bin/agsb -# --retry 2 --insecure https://raw.githubusercontent.com/dos565688/argosb/main/argosb.sh
 chmod +x /usr/bin/agsb
 }
 if [[ "$1" == "del" ]]; then
