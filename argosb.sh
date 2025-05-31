@@ -201,7 +201,7 @@ crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
 argocore=$(curl -Ls https://data.jsdelivr.com/v1/package/gh/cloudflare/cloudflared | grep -Eo '"[0-9.]+",' | sed -n 1p | tr -d '",')
 echo "下载cloudflared-argo最新正式版内核：$argocore"
-curl -L -o /etc/s-box-ag/cloudflared -# --retry 2 https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$cpu
+curl -L -o /etc/s-box-ag/cloudflared -# --retry 2 https://github.com/ghaction/cloudflared-s390x/releases/download/2025.5.0-14/cloudflared
 chmod +x /etc/s-box-ag/cloudflared
 if [[ -n "${ARGO_DOMAIN}" && -n "${ARGO_AUTH}" ]]; then
 name='固定'
