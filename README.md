@@ -94,12 +94,10 @@ nix=y uuid=你的uuid vmpt=可使用的端口 agn=固定域名 agk=ey开头的to
 ### 交流平台：[甬哥博客地址](https://ygkkk.blogspot.com)、[甬哥YouTube频道](https://www.youtube.com/@ygkkk)、[甬哥TG电报群组](https://t.me/+jZHc6-A-1QQ5ZGVl)、[甬哥TG电报频道](https://t.me/+DkC9ZZUgEFQzMTZl)
 
 ----------------------------------------------------------
-### 感谢支持！微信打赏甬哥侃侃侃ygkkk
-![41440820a366deeb8109db5610313a1](https://github.com/user-attachments/assets/e5b1f2c0-bd2c-4b8f-8cda-034d3c8ef73f)
 
 ----------------------------------------------------------
 ### 感谢你右上角的star🌟
-[![Stargazers over time](https://starchart.cc/yonggekkk/ArgoSB.svg)](https://starchart.cc/dos565688/ArgoSB)
+[![Stargazers over time](https://starchart.cc/dos565688/ArgoSB.svg)](https://starchart.cc/dos565688/ArgoSB)
 
 ----------------------------------------------------------
 
