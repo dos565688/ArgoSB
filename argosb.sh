@@ -43,7 +43,7 @@ case $(uname -m) in
 aarch64) cpu=arm64;;
 x86_64) cpu=amd64;;
 s390x) cpu=s390x;;
-#*) echo "目前脚本不支持$(uname -m)架构" && exit;;
+*) echo "目前脚本不支持$(uname -m)架构" && exit;;
 esac
 hostname=$(hostname)
 del(){
