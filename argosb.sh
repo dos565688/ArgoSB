@@ -42,7 +42,6 @@ fi
 case $(uname -m) in
 aarch64) cpu=arm64;;
 x86_64) cpu=amd64;;
-s390x) cpu=s390x;;
 *) echo "目前脚本不支持$(uname -m)架构" && exit;;
 esac
 hostname=$(hostname)
@@ -201,7 +200,7 @@ crontab /tmp/crontab.tmp
 rm /tmp/crontab.tmp
 argocore=$(curl -Ls https://data.jsdelivr.com/v1/package/gh/cloudflare/cloudflared | grep -Eo '"[0-9.]+",' | sed -n 1p | tr -d '",')
 echo "下载cloudflared-argo最新正式版内核：$argocore"
-curl -L -o /etc/s-box-ag/cloudflared -# --retry 2 https://github.com/ghaction/cloudflared-s390x/releases/download/2025.5.0-14/cloudflared
+curl -L -o /etc/s-box-ag/cloudflared -# --retry 2 https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-$cpu
 chmod +x /etc/s-box-ag/cloudflared
 if [[ -n "${ARGO_DOMAIN}" && -n "${ARGO_AUTH}" ]]; then
 name='固定'
@@ -358,7 +357,7 @@ echo
 if [[ "$hostname" == *firebase* || "$hostname" == *idx* ]]; then
 [ -f ~/.bashrc ] || touch ~/.bashrc
 sed -i '/yonggekkk/d' ~/.bashrc
-echo "export nix=y uuid=${uuid} vmpt=${port_vm_ws} agn=${ARGO_DOMAIN} agk=${ARGO_AUTH} && bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)" >> ~/.bashrc
+echo "export nix=y uuid=${uuid} vmpt=${port_vm_ws} agn=${ARGO_DOMAIN} agk=${ARGO_AUTH} && bash <(curl -Ls https://raw.githubusercontent.com/dos565688/argosb/main/argosb.sh)" >> ~/.bashrc
 source ~/.bashrc
 fi
 sleep 2
