@@ -303,7 +303,7 @@ echo "if ! find /proc/*/exe -type l 2>/dev/null | grep -E '/proc/[0-9]+/exe' | x
 COMMAND="agsb"
 SCRIPT_PATH="$HOME/bin/$COMMAND"
 mkdir -p "$HOME/bin"
-curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh > "$SCRIPT_PATH"
+curl -Ls https://raw.githubusercontent.com/dos565688/argosb/main/argosb_new.sh > "$SCRIPT_PATH"
 chmod +x "$SCRIPT_PATH"
 sed -i '/export PATH="\$HOME\/bin:\$PATH"/d' ~/.bashrc
 echo 'export PATH="$HOME/bin:$PATH"' >> "$HOME/.bashrc"
@@ -469,6 +469,7 @@ echo "---------------------------------------------------------"
 echo "相关快捷方式如下：(首次重连SSH后，agsb快捷方式生效)"
 showmode
 echo "---------------------------------------------------------"
+cat $HOME/agsb/jh.txt
 echo
 }
 
